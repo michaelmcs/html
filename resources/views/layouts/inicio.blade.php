@@ -223,7 +223,7 @@
                     <li class="nav-item">
                         <a class="nav-link text-white px-3 {{ Request::is('busqueda*', 'vistaPrevia*') ? 'activo' : '' }}"
                             aria-current="page" href="{{ route('busqueda.index') }}"><i class="fa-solid fa-search"></i>
-                            Busqueda Certificados</a>
+                            Certificados</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link text-white p-2" href="{{ route('home') }}"><i

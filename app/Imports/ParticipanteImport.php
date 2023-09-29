@@ -36,6 +36,8 @@ class ParticipanteImport implements ToModel, WithHeadingRow, WithBatchInserts, W
             "correo" => $row["correo_del_participante"],
             "codigo" => $row["codigo"],
             "participo_como" => $row["participo_como"],
+            "programa_id"=> $row["programa_id"],
+            "tipo_id" => $row["tipo_id"]
         ]);
     }
 

@@ -19,6 +19,7 @@
                 <th>CORREO</th>
                 <th>CODIGO</th>
                 <th>PARTICIPÓ COMO</th>
+                <th>PROGRAMA ID</th>
             </tr>
         </thead>
         <tbody>
@@ -31,6 +32,7 @@
                     <td>{{ $item->correo }}</td>
                     <td>{{ $item->codigo }}</td>
                     <td>{{ $item->participo_como }}</td>
+                    <td>{{ $item->id_programa }}</td>
                 </tr>
             @endforeach
         </tbody>

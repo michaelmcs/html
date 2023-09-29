@@ -36,6 +36,9 @@ class ParticipanteController extends Controller
 
     public function store(Request $request)
     {
+
+        return $request;
+
         $request->validate([
             "curso" => "required",
             "dni" => "required",
@@ -60,8 +63,6 @@ class ParticipanteController extends Controller
                 return back()->with("DUPLICADO", "El participante '$request->nombre $request->apellido' con DNI: '$request->dni' ya está inscrito en el curso '$value->nombre' ");
             }
         }
-
-
 
         if ($request->hasFile("certificado")) {
             $file = $request->file("certificado");
@@ -218,6 +219,8 @@ class ParticipanteController extends Controller
 
     public function importParticipante(Request $request)
     {
+        // return $request;
+
         $request->validate([
             "dato" => "required|file|mimes:xlsx,xls,csv",
             "id_curso" => "required"
@@ -239,6 +242,7 @@ class ParticipanteController extends Controller
         Excel::import(new ParticipanteImport($request->id_curso), $file);
         return back()->with("CORRECTO", "Los datos se han cargado exitosamente");
     }
+
 
     public function modificarCert(Request $request, $id)
     {

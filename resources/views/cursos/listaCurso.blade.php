@@ -14,7 +14,7 @@
     </script>
 
 
-    <h4 class="text-center text-secondary">LISTA DE CURSOS REGISTRADOSs</h4>
+    <h4 class="text-center text-secondary">LISTA DE CURSOS REGISTRADOS</h4>
 
     <div class="form-group row col-12 px-4">
         <div class="col-12 col-sm-9">

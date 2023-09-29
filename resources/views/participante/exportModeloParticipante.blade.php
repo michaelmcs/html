@@ -18,6 +18,8 @@
                 <th>CORREO DEL PARTICIPANTE</th>
                 <th>CODIGO</th>
                 <th>PARTICIPO COMO</th>
+                <th>PROGRAMA ID</th>
+                <th>TIPO ID</th>
             </tr>
         </thead>
         <tbody>

@@ -20,5 +20,7 @@ class Participante extends Model
         'codigo',
         'participo_como',
         'certificado',
+        'programa_id',
+        'tipo_id'
     ];
 }

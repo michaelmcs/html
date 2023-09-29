@@ -11,7 +11,6 @@
             <div class="col-12 col-sm-4 col-lg-3 mb-2">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <p class="nav-link text-white m-0 text-center bg-secondary"><b>CURSOS</b></p>
-                    
                     {{-- <a class="nav-link active" id="v-pills-inicio-tab" data-bs-toggle="pill" href="#v-pills-inicio"
                         role="tab" aria-controls="v-pills-inicio" aria-selected="true">Inicio</a> --}}
                     {{-- <li class="nav-item">
@@ -19,7 +18,6 @@
                             aria-current="page" href="{{ route('busqueda.index') }}"><i class="fa-solid fa-search"></i>
                             Certificados</a>
                     </li> --}}
-
                     <a class="nav-link" id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-home" role="tab"
                         aria-controls="v-pills-home" aria-selected="true"><i class="far fa-check-circle"></i> Próximamente</a>
                     <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" href="#v-pills-profile"
@@ -78,8 +76,7 @@
 
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                        <!-- <div class="row col-12"> -->
-                        <div class="col-12">
+                        <div class="row col-12">
                             @foreach ($cursoEncu as $item2)
                                 <div class="col-12 col-md-4 mb-4">
                                     <div class="card">

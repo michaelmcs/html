@@ -77,10 +77,36 @@
                 </div>
 
                 <div class="fl-flex-label mb-4 col-12 col-lg-6">
-                    <label>Participó como *</label>
+                    <label>Participó como * </label>
                     <select required name="participa" class="input input__text" id="opciones" onchange="mostrarInput()">
                         <option value="">Seleccionar...</option>
-                        <option {{ old('participa') == 'asistente' ? 'selected' : '' }} value="asistente">Asistente
+                        <option {{ old('participa') == 'asistente' ? 'selected' : '' }} value=1>Asistente
+                        </option>
+                        <option {{ old('participa') == 'ponente' ? 'selected' : '' }} value=2>Ponente</option>
+                        <option {{ old('participa') == 'otro' ? 'selected' : '' }} value="otro">Otro</option>
+                    </select>
+                    @error('participa')
+                        <small class="error error__text">{{ $message }}</small>
+                    @enderror
+                </div>
+                <div class="fl-flex-label mb-4 col-12 col-lg-6">
+                    <label>programa de estudio *</label>
+                    <select required name="programa" class="input input__text" id="opciones2" onchange="mostrarInput2()">
+                        <option value="">Seleccionar...</option>
+                        <option {{ old('participa') == 'asistente' ? 'selected' : '' }} value=3>Minas</option>
+                        <option {{ old('participa') == 'ponente' ? 'selected' : '' }} value=4>Economica</option>
+                        <option {{ old('participa') == 'otro' ? 'selected' : '' }} value="otro">Otro</option>
+                    </select>
+                    @error('participa')
+                        <small class="error error__text">{{ $message }}</small>
+                    @enderror
+                </div>
+
+                <!-- <div class="fl-flex-label mb-4 col-12 col-lg-6">
+                    <label>tipo de participante *</label>
+                    <select required name="tipo" class="input input__text" id="opciones3" onchange="mostrarInput()">
+                        <option value="">Seleccionar...</option>
+                        <option {{ old('participa') == 'asistente' ? 'selected' : '' }} value="asistente">
                         </option>
                         <option {{ old('participa') == 'ponente' ? 'selected' : '' }} value="ponente">Ponente</option>
                         <option {{ old('participa') == 'otro' ? 'selected' : '' }} value="otro">Otro</option>
@@ -88,7 +114,7 @@
                     @error('participa')
                         <small class="error error__text">{{ $message }}</small>
                     @enderror
-                </div>
+                </div>  -->
 
                 <div class="fl-flex-label mb-4 col-12 col-lg-6">
                     <input required type="text" name="codigo" class="input input__text" id="codigo"
@@ -181,10 +207,12 @@
     <script>
         window.onload = function() {
             mostrarInput();
+            mostrarInput2();
         }
 
         function mostrarInput() {
             var select = document.getElementById("opciones");
+
             var campoOtro = document.getElementById("campoOtro");
 
             if (select.value == "otro") {
@@ -192,6 +220,11 @@
             } else {
                 campoOtro.style.display = "none";
             }
+        }
+
+        function mostrarInput2() {
+            var select = document.getElementById("opciones2");
+            var campoOtro = document.getElementById("campoOtro2");
         }
     </script>
 
