@@ -9,9 +9,22 @@
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     @foreach ($datos as $item)
         <title>{{ $item->nombre }}</title>
+
+        <div>
+
+        <div>
         <link rel="shortcut icon" href="{{ asset("foto/empresa/$item->foto") }}" type="image/x-icon">
+        </div>
+
+            <div>
+        <link rel="shortcut icon" href="{{ asset("foto/empresa/$item->foto") }}" type="image/x-icon">
+        </div>
+        </div>
+     
+
     @endforeach
     <script src="https://kit.fontawesome.com/646ac4fad6.js" crossorigin="anonymous"></script>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="{{ asset('app/publico/js/lib/jquery/jquery.min.js') }}"></script>

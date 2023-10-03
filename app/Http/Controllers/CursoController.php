@@ -26,7 +26,7 @@ class CursoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "nombre" => "required|unique:Curso,nombre",
+            "nombre" => "required|unique:curso,nombre",
             "hora" => "required",
             "descripcion" => "required",
             "inicio" => "required",
