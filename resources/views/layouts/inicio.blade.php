@@ -9,28 +9,15 @@
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     @foreach ($datos as $item)
         <title>{{ $item->nombre }}</title>
-
-        <div>
-
-        <div>
         <link rel="shortcut icon" href="{{ asset("foto/empresa/$item->foto") }}" type="image/x-icon">
-        </div>
-
-            <div>
-        <link rel="shortcut icon" href="{{ asset("foto/empresa/$item->foto") }}" type="image/x-icon">
-        </div>
-        </div>
-     
-
     @endforeach
+
     <script src="https://kit.fontawesome.com/646ac4fad6.js" crossorigin="anonymous"></script>
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="{{ asset('app/publico/js/lib/jquery/jquery.min.js') }}"></script>
     <style>
         :root {
-            /* --navbarBackground: #29282d; */
             --navbarBackground: #2b549c;
             --navbarActivo: #ffffff15;
             --navbarHover: #ffffff15;
@@ -48,44 +35,53 @@
         .nav-link:hover {
             background: var(--navbarHover);
         }
-        .nav-link.active{
-            background: var(--navbarActivo)!important;
+
+        .nav-link.active {
+            background: var(--navbarActivo) !important;
         }
+
         .fondo {
             width: 100%;
             min-height: 170px;
             background-size: cover;
             background-image: url({{ asset('img/fondo.png') }});
-            margin-top: 20px;
-     
+            margin-top: 60px;
         }
 
         .logo {
-            width: 175px
+            width: 100%;
+            max-width: 175px;
+            height: auto;
+        }
+
+        .smaller-logo {
+            width: 100%;
+            max-width: 100px;
+            height: auto;
         }
 
         h1 {
-            font-size: 38px;
+            font-size: 2.5rem;
             text-shadow: 0px 0px 5px black, 1px 1px 5px black, 2px 2px 5px black;
         }
 
         .desc {
-            font-size: 20px;
+            font-size: 1.25rem;
             text-shadow: 0px 0px 5px black, 1px 1px 5px black, 2px 2px 5px black;
         }
 
-        div.container {
-            width: 500px;
+        .container {
+            width: 100%;
             max-width: 680px;
             background: white;
             margin: auto;
-            padding: 20px
+            padding: 20px;
         }
 
         .form {
             display: flex;
             flex-direction: column;
-            gap: 5px
+            gap: 5px;
         }
 
         input {
@@ -119,7 +115,6 @@
             background: rgb(1, 137, 227);
         }
 
-
         p.title {
             text-align: center;
             font-weight: bold;
@@ -139,7 +134,6 @@
             width: 100%;
             padding: 0;
             display: flex;
-
         }
 
         .marca {
@@ -183,7 +177,6 @@
             background: var(--navbarBackground);
         }
 
-
         .nav-pills a {
             color: #e0dddd;
         }
@@ -205,14 +198,14 @@
             font-size: 15px;
         }
 
-        @media screen and (max-width:675px) {
+        @media screen and (max-width: 675px) {
             h1 {
-                font-size: 28px;
+                font-size: 1.75rem;
             }
         }
 
-        @media screen and (max-width:510px) {
-            div.container {
+        @media screen and (max-width: 510px) {
+            .container {
                 width: 90%;
             }
         }
@@ -238,23 +231,22 @@
                             aria-current="page" href="{{ route('busqueda.index') }}"><i class="fa-solid fa-search"></i>
                             Certificados</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link text-white p-2" href="{{ route('home') }}"><i
-                                class="fa-solid fa-user-gear"></i> Acceder
-                            al sistema</a>
-                    </li> -->
-
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="fondo d-flex justify-content-around align-items-center">
+    <div class="fondo d-flex flex-column flex-md-row justify-content-center align-items-center text-center">
         @foreach ($datos as $item)
-            <div class="p-5"><img class="logo" src="{{ asset("foto/empresa/$item->foto") }}" alt=""></div>
+            <div class="p-3">
+                <img class="logo img-fluid" src="{{ asset('foto/empresa/' . $item->foto) }}" alt="Logo Empresa">
+            </div>
             <div class="p-3 text-white">
                 <h1 class="text-center">"{{ $item->nombre }}"</h1>
-                <p class="text-center desc">Plataforma de Certificación Digital</p>
+                <p class="desc">Plataforma de Certificación Digital</p>
+            </div>
+            <div class="p-3">
+                <img class="smaller-logo img-fluid" src="https://vra-certificados.unap.edu.pe/webinar2/logo_unap.webp" alt="Logo UNAP">
             </div>
         @endforeach
     </div>
