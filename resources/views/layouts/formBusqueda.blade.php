@@ -8,7 +8,7 @@
             <input id="dni" required type="text" name="dni" placeholder="Ingrese su DNI o código">
             <div class="group__button">
                 <button id="entrada" class="entrada"><i class="fa-solid fa-magnifying-glass"></i>
-                    Buscar Certificado</button>
+                    Buscaraa Certificado</button>
             </div>
         </form>
     </div>
